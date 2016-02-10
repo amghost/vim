@@ -17,7 +17,7 @@ mv -f ~/.vimrc ~/.vimrc_old
 #bring in new vim config
 cd ~/ && git clone https://github.com/amghost/vim.git
 mv -f ~/vim ~/.vim
-mv -f ~/vim/.vimrc ~/.vimrc
+mv -f ~/.vim/.vimrc ~/.vimrc
 
 #first install gmarik/vundle.git
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
