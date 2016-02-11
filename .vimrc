@@ -4,21 +4,34 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+"manage Vundle itselt
 Plugin 'gmarik/Vundle.vim'
+
+"nerdtree related
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+
+"CtrlP
 Plugin 'kien/ctrlp.vim'
+
+"vim-surround provides mappings to easily delete, change and add such surroundings in pairs.
 Plugin 'tpope/vim-surround'
+
 Plugin 'Shougo/neocomplcache.vim'
+
+"Git Wrapper
 Plugin 'tpope/vim-fugitive'
+
 Plugin 'bling/vim-airline'
+
+"provides syntax and indent plugins for programming languages or script languages
 Plugin 'pangloss/vim-javascript'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'klen/python-mode'
 Plugin 'hdima/python-syntax'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'fatih/vim-go'
 Plugin 'ekalinin/Dockerfile.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 
@@ -42,7 +55,6 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -99,6 +111,10 @@ set foldcolumn=1
 
 " Treat uppercase Q as lowercase q
 :command Q q
+
+" Easily paste
+set paste
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -274,27 +290,6 @@ inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""
-" => Python Syntax
-"""""""""""""""""""""""""""""""""""""""""""""""
-let python_highlight_all = 1
-
-let g:pymode_folding = 0
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-
-let g:pymode_syntax_string_formatting = g:pymode_syntax_all
-let g:pymode_syntax_string_format = g:pymode_syntax_all
-let g:pymode_syntax_string_templates = g:pymode_syntax_all
-let g:pymode_syntax_doctests = g:pymode_syntax_all
-
-let g:pymode_syntax_builtin_objs = g:pymode_syntax_all
-let g:pymode_syntax_builtin_types = g:pymode_syntax_all
-let g:pymode_syntax_docstrings = g:pymode_syntax_all
-
-let g:pymode_rope = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " => Airline
